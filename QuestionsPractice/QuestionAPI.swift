@@ -53,7 +53,7 @@ class QuestionAPI {
                 completion(.failure(APIError.invalidResponse))
                 return
             }
-            //print("API Response Data: \(String(data: data, encoding: .utf8) ?? "")")
+            print("API Response Data: \(String(data: data, encoding: .utf8) ?? "")")
             
             do {
                 let detector = try JSONDecoder().decode(QuestionTypeDetector.self, from: data)

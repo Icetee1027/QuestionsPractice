@@ -14,9 +14,6 @@
 		315322CE2D76CB5F00994525 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 315322CC2D76CB5F00994525 /* Main.storyboard */; };
 		315322D02D76CB6200994525 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 315322CF2D76CB6200994525 /* Assets.xcassets */; };
 		315322D32D76CB6200994525 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 315322D12D76CB6200994525 /* LaunchScreen.storyboard */; };
-		315322DE2D76CB6200994525 /* cardcameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315322DD2D76CB6200994525 /* cardcameTests.swift */; };
-		315322E82D76CB6200994525 /* cardcameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315322E72D76CB6200994525 /* cardcameUITests.swift */; };
-		315322EA2D76CB6200994525 /* cardcameUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315322E92D76CB6200994525 /* cardcameUITestsLaunchTests.swift */; };
 		31692C262DB690B3003276C5 /* QuestionGameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31692C252DB690B2003276C5 /* QuestionGameController.swift */; };
 		31692C282DB6AAD9003276C5 /* QuestionAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31692C272DB6AAD9003276C5 /* QuestionAPI.swift */; };
 		31692C2D2DB6C990003276C5 /* QuestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31692C2C2DB6C990003276C5 /* QuestionModel.swift */; };
@@ -64,10 +61,7 @@
 		315322D22D76CB6200994525 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		315322D42D76CB6200994525 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		315322D92D76CB6200994525 /* QuestionsPracticeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuestionsPracticeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		315322DD2D76CB6200994525 /* cardcameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cardcameTests.swift; sourceTree = "<group>"; };
 		315322E32D76CB6200994525 /* QuestionsPracticeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuestionsPracticeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		315322E72D76CB6200994525 /* cardcameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cardcameUITests.swift; sourceTree = "<group>"; };
-		315322E92D76CB6200994525 /* cardcameUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cardcameUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		31692C252DB690B2003276C5 /* QuestionGameController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionGameController.swift; sourceTree = "<group>"; };
 		31692C272DB6AAD9003276C5 /* QuestionAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionAPI.swift; sourceTree = "<group>"; };
 		31692C292DB6C198003276C5 /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
@@ -116,8 +110,6 @@
 			isa = PBXGroup;
 			children = (
 				315322C52D76CB5F00994525 /* QuestionsPractice */,
-				315322DC2D76CB6200994525 /* cardcameTests */,
-				315322E62D76CB6200994525 /* cardcameUITests */,
 				315322C42D76CB5F00994525 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -154,23 +146,6 @@
 				31692C332DB6CBB6003276C5 /* Models */,
 			);
 			path = QuestionsPractice;
-			sourceTree = "<group>";
-		};
-		315322DC2D76CB6200994525 /* cardcameTests */ = {
-			isa = PBXGroup;
-			children = (
-				315322DD2D76CB6200994525 /* cardcameTests.swift */,
-			);
-			path = cardcameTests;
-			sourceTree = "<group>";
-		};
-		315322E62D76CB6200994525 /* cardcameUITests */ = {
-			isa = PBXGroup;
-			children = (
-				315322E72D76CB6200994525 /* cardcameUITests.swift */,
-				315322E92D76CB6200994525 /* cardcameUITestsLaunchTests.swift */,
-			);
-			path = cardcameUITests;
 			sourceTree = "<group>";
 		};
 		31692C322DB6CB86003276C5 /* Views */ = {
@@ -356,7 +331,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				315322DE2D76CB6200994525 /* cardcameTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,8 +338,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				315322EA2D76CB6200994525 /* cardcameUITestsLaunchTests.swift in Sources */,
-				315322E82D76CB6200994525 /* cardcameUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -537,7 +509,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "-.cardcame";
+				PRODUCT_BUNDLE_IDENTIFIER = "-.QuestionsPractice";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -564,7 +536,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "-.cardcame";
+				PRODUCT_BUNDLE_IDENTIFIER = "-.QuestionsPractice";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -582,7 +554,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "-.cardcameTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "-.QuestionsPracticeTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -601,7 +573,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "-.cardcameTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "-.QuestionsPracticeTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -618,12 +590,12 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "-.cardcameUITests";
+				PRODUCT_BUNDLE_IDENTIFIER = "-.QuestionsPracticeUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = cardcame;
+				TEST_TARGET_NAME = QuestionsPractice;
 			};
 			name = Debug;
 		};
@@ -635,12 +607,12 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "-.cardcameUITests";
+				PRODUCT_BUNDLE_IDENTIFIER = "-.QuestionsPracticeUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = cardcame;
+				TEST_TARGET_NAME = QuestionsPractice;
 			};
 			name = Release;
 		};

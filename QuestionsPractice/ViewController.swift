@@ -202,7 +202,7 @@ class ViewController: UIViewController, QuestionGameDelegate {
 
 
     func navigateToNextPage(with question: any QuestionProtocol) {
-        print("Navigating to next page with question: \(question)")
+        //print("Navigating to next page with question: \(question)")
         let questionControlView = QuestionControlView(question: question)
         let hostingController = UIHostingController(rootView: questionControlView)
         navigationController?.pushViewController(hostingController, animated: true)
