@@ -181,49 +181,42 @@ struct QuestionControlView: View {
                 let half = correctAnswers.count / 2
                 let leftAnswers = Array(correctAnswers.prefix(half))
                 let rightAnswers = Array(correctAnswers.suffix(half))
-                
-                // Debug: print the left and right answer arrays
-                print("Left Answers: \(leftAnswers)")
-                print("Right Answers: \(rightAnswers)")
-                
-                // Create correct answers dictionary
+
+                // 建立正確配對的字典
                 let correctDict = Dictionary(uniqueKeysWithValues: zip(leftAnswers, rightAnswers))
-                
-                // Debug: print the correct dictionary
-                print("Correct Dictionary: \(correctDict)")
-                
-                // Convert dictionary elements to sorted arrays of tuples
                 let sortedCorrectPairs = correctDict.map { ($0.key, $0.value) }.sorted { $0.0 < $1.0 }
-                let sortedSelectedPairs = selectedPairs.map { ($0.key, $0.value) }.sorted { $0.0 < $1.0 }
-                
-                // Debug: print the sorted correct pairs and selected pairs
-                print("Sorted Correct Pairs: \(sortedCorrectPairs)")
-                print("Sorted Selected Pairs: \(sortedSelectedPairs)")
-                
-                // Manually compare the sorted arrays
+
+                // 把使用者選的 pair 轉為代碼
+                func extractCode(from text: String) -> String {
+                    return text.split(separator: ".").first.map { String($0) } ?? text
+                }
+
+                let sortedSelectedPairs = selectedPairs
+                    .map { (extractCode(from: $0.key), extractCode(from: $0.value)) }
+                    .sorted { $0.0 < $1.0 }
+
+                // 比較是否完全相符
                 isCorrect = sortedCorrectPairs.count == sortedSelectedPairs.count &&
                     zip(sortedCorrectPairs, sortedSelectedPairs).allSatisfy { pair in
                         pair.0.0 == pair.1.0 && pair.0.1 == pair.1.1
                     }
-                
-                // Debug: print the result of the comparison
-                print("Is Correct: \(isCorrect)")
-                
-                // Format correct answer as A → 1, B → 2 ...
+
+                // 顯示正確答案的文字格式
                 let pairedAnswerText = zip(leftAnswers, rightAnswers)
                     .map { "\($0) → \($1)" }
                     .joined(separator: ", ")
-                
-                // Debug: print the paired answer text
-                print("Paired Answer Text: \(pairedAnswerText)")
-                
+
                 self.correctAnswer = pairedAnswerText
+
+                /*// Debug
+                print("Left Answers: \(leftAnswers)")
+                print("Right Answers: \(rightAnswers)")
+                print("Correct Dictionary: \(correctDict)")
+                print("Sorted Correct Pairs: \(sortedCorrectPairs)")
+                print("Sorted Selected Pairs: \(sortedSelectedPairs)")
+                print("Is Correct: \(isCorrect)")
+                print("Paired Answer Text: \(pairedAnswerText)")*/
             }
-
-
-
-
-
 
         case .reading:
             if let correctAnswers = question.correct_answer {
