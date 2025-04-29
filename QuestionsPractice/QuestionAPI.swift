@@ -26,7 +26,7 @@ class QuestionAPI {
     private init() {}
     
     func generateQuestion(info: QuestionInfo, completion: @escaping (Result<any QuestionProtocol, Error>) -> Void) {
-        guard let url = URL(string: "http://172.20.10.2:8080/generate-question") else {
+        guard let url = URL(string: "http://10.101.12.100:8080/generate-question") else {
             completion(.failure(APIError.invalidURL))
             return
         }
